@@ -20,6 +20,10 @@
     background-color: #999999 ;
     text-decoration: none;
     }
+	
+	body {
+        margin: 0;
+    }
 
     .body{
         display: grid;
@@ -172,7 +176,8 @@
             	<div style="font-size: 12px;"> #1234</div> 
             </div>
         </div>
-        <div class="content">
+        <div class="content" >
+			<div id="content">
 			<div style="padding-top: 25px;"> 
 				<img src="https://i.pinimg.com/280x280_RS/88/d8/d0/88d8d00d9a100348c11bbc8971ef307a.jpg"> Xiao Se
 			</div>
@@ -246,18 +251,23 @@
 				what an annoying being
 			</div>
 			<div style="padding-left: 46px;"> i will steal your phone and sell it to the black market</div>
-			<input type="text" class='textpan' placeholder="➕ message @#genshin-impact ">
-			<button type="button" class="newBtn">➤</button>
+			</div>
 
+			<input type="text" id='textpan' class="textpan" placeholder="➕ message @#genshin-impact ">
+			<button type="button" id="newBtn" class="newBtn">➤</button>
 			<script>
 
 			    var textpan = document.getElementById('textpan');
 			    var newMessageBtn = document.getElementById('newBtn');
-			    var messages = document.getElementById('messages');
+			    var messages = document.getElementById('content');
 			   
 			    newMessageBtn.onclick = function(){
-			        messages.innerHTML = messages.innerHTML + "<p>Ray: " + textpan.value + "</p>";
-			        messages.value="";
+					// console.log('testingtesintesngldasjfkdsajfj;dsajfksda');
+					// console.log(textpan.value);
+
+                    messages.innerHTML = messages.innerHTML + '<div style="padding-top: 25px;"><img src="https://i.pinimg.com/280x280_RS/88/d8/d0/88d8d00d9a100348c11bbc8971ef307a.jpg">XiaoSe<br>' + textpan.value + "</div>";
+			        // messages.innerHTML = messages.innerHTML + "<p>Ray: " + textpan.value + "</p>";
+			        // messages.value="";
 			    };
 			       
 			</script>
